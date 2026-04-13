@@ -1,7 +1,8 @@
 class Solution:
     def separateDigits(self, nums: List[int]) -> List[int]:
         arr=[]
-        num="".join(map(str, nums))
+        mp=map(str,nums)
+        num="".join(mp)
         for n in num:
             arr.append(int(n))
         return arr
