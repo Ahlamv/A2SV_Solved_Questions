@@ -7,6 +7,8 @@
 from collections import deque
 class Solution:
     def isUnivalTree(self, root: Optional[TreeNode]) -> bool:
+        if not root:
+            return []
         queue = deque([root])
         queue.append(root)
         while queue:
@@ -16,7 +18,7 @@ class Solution:
             if node.left:
                 queue.append(node.left)
             if node.right:
-                queue.append(node.right)
+                node=node.right
         return True
 
             
